@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<DirectionalLayout
+<DependentLayout
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
@@ -11,9 +11,23 @@
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:background_element="$graphic:background_ability_main"
-        ohos:layout_alignment="horizontal_center"
+        ohos:layout_alignment="bottom"
         ohos:text="$string:mainability_HelloWorld"
         ohos:text_size="40vp"
         />
 
-</DirectionalLayout>
+    <TextField
+        ohos:id="$+id:text_field"
+        ohos:height="60vp"
+        ohos:width="match_parent"
+        ohos:below="$id:text_helloworld"
+        />
+
+    <TabList
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:align_parent_bottom="true"
+        ohos:background_element="#19000000"
+        />
+
+</DependentLayout>
