@@ -8,15 +8,17 @@
 
     <TabList
         ohos:id="$+id:bottom_nav_bar"
-        ohos:height="56vp"
+        ohos:height="50vp"
         ohos:width="match_parent"
         ohos:align_parent_bottom="true"
         ohos:orientation="horizontal"
 
         ohos:background_element="#C902062B"
-        ohos:text_size="20vp"
+        ohos:text_size="18vp"
         ohos:text_alignment="center"
         ohos:fixed_mode="true"
+
+        ohos:selected_text_color="#FFF3F8FF"
     />
 
 
@@ -24,9 +26,8 @@
         ohos:id="$+id:stack_layout"
         ohos:height="match_parent"
         ohos:width="match_parent"
-        ohos:text_color="#FF0FFF"
-        ohos:background_element="#FAD815"
-        ohos:text_size="20vp"
+        ohos:background_element="#66000000"
+        ohos:text_size="16fp"
         ohos:layout_alignment="center"
         ohos:text_alignment="center"
         ohos:above="$id:bottom_nav_bar"/>

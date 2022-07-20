@@ -8,8 +8,8 @@
     <Text
         ohos:height="match_parent"
         ohos:width="match_parent"
-        ohos:text="首页详情页面"
+        ohos:text="File Sessions"
         ohos:text_alignment="center"
-        ohos:text_size="16vp"
-        ohos:background_element="#FF0FFF"/>
+        ohos:text_size="24fp"
+        ohos:background_element="#FAD815"/>
 </DependentLayout>

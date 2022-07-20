@@ -11,6 +11,18 @@
     {
       "name": "mainability_HelloWorld",
       "value": "你好，世界"
+    },
+    {
+      "name": "mainability_FileTab",
+      "value": "文档"
+    },
+    {
+      "name": "mainability_TodoTab",
+      "value": "待办"
+    },
+    {
+      "name": "mainability_SettingsTab",
+      "value": "设置"
     }
   ]
 }

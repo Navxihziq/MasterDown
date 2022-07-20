@@ -41,6 +41,25 @@
         "type": "page",
         "launchType": "standard"
       }
+    ],
+    "metaData":{
+      "customizeData":[
+        {
+          "name": "hwc-theme",
+          "value": "androidhwext:style/Theme.Emui.NoTitleBar",
+          "extra":""
+        }
+      ]
+    },
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.READ_USER_STORAGE",
+        "reason": "",
+        "usedScene": {
+          "ability": ["com.zhixuanqi.masterdown.MainAbility"],
+          "when": "inuse"
+        }
+      }
     ]
   }
 }
