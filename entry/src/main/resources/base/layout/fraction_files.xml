@@ -12,4 +12,10 @@
         ohos:text_alignment="center"
         ohos:text_size="24fp"
         ohos:background_element="#FAD815"/>
+
+    <ListContainer
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        />
+
 </DependentLayout>
