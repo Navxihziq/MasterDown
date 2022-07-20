@@ -8,8 +8,10 @@
     <Image
         ohos:id="$+id:file_type_icon"
         ohos:height="match_parent"
-        ohos:width="match_content"
-        ohos:image_src="$media:file"
+        ohos:width="40vp"
+        ohos:margin="10vp"
+        ohos:scale_mode="zoom_center"
+        ohos:image_src="$media:folder"
         ohos:background_element="#FF0FFF"
         />
 
