@@ -33,10 +33,29 @@ public class MainAbility extends FractionAbility {
     public void initView() throws NotExistException, WrongTypeException, IOException {
         // get the tab list by id
         TabList tablist = (TabList) findComponentById(ResourceTable.Id_bottom_nav_bar);
+        // read the items based on configs
         getMenuItems();
         // push everything in the list to the bar
         pushMenuItems(tablist);
         tablist.setFixedMode(true);
+
+        // add event listener to the tab list
+        tablist.addTabSelectedListener(new TabList.TabSelectedListener() {
+            @Override
+            public void onSelected(TabList.Tab tab) {
+                switchPage(tab.getPosition());
+            }
+
+            @Override
+            public void onUnselected(TabList.Tab tab) {
+
+            }
+
+            @Override
+            public void onReselected(TabList.Tab tab) {
+
+            }
+        });
 
         // select the first tab as default
         tablist.getTabAt(0).select();

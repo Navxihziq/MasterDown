@@ -12,4 +12,9 @@ public class FilesFraction extends Fraction {
     protected Component onComponentAttached(LayoutScatter scatter, ComponentContainer container, Intent intent) {
         return scatter.parse(ResourceTable.Layout_fraction_files, container, false);
     }
+
+    @Override
+    protected void onStart(Intent intent) {
+        super.onStart(intent);
+    }
 }
