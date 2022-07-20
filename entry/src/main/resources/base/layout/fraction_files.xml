@@ -14,6 +14,7 @@
         ohos:background_element="#FAD815"/>
 
     <ListContainer
+        ohos:id="$+id:file_list_container"
         ohos:height="match_content"
         ohos:width="match_parent"
         />
