@@ -11,7 +11,7 @@
         ohos:text="File Sessions"
         ohos:text_alignment="center"
         ohos:text_size="24fp"
-        ohos:background_element="#FAD815"/>
+    />
 
     <ListContainer
         ohos:id="$+id:file_list_container"
