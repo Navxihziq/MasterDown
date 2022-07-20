@@ -1,12 +1,13 @@
 package com.zhixuanqi.masterdown;
 
 import com.zhixuanqi.masterdown.fraction.FilesFraction;
+import com.zhixuanqi.masterdown.fraction.SettingsFraction;
+import com.zhixuanqi.masterdown.fraction.TodosFraction;
 import com.zhixuanqi.masterdown.slice.MainAbilitySlice;
 import ohos.aafwk.ability.fraction.FractionAbility;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.TabList;
 import ohos.global.resource.NotExistException;
-import ohos.global.resource.Resource;
 import ohos.global.resource.ResourceManager;
 import ohos.global.resource.WrongTypeException;
 
@@ -65,6 +66,22 @@ public class MainAbility extends FractionAbility {
                 getFractionManager()
                         .startFractionScheduler()
                         .replace(ResourceTable.Id_stack_layout, new FilesFraction())
+                        .submit();
+                break;
+
+            case 1:
+                // switch to to-do panel
+                getFractionManager()
+                        .startFractionScheduler()
+                        .replace(ResourceTable.Id_stack_layout, new TodosFraction())
+                        .submit();
+                break;
+
+            case 2:
+                // switch to settings panel
+                getFractionManager()
+                        .startFractionScheduler()
+                        .replace(ResourceTable.Id_stack_layout, new SettingsFraction())
                         .submit();
                 break;
         }
