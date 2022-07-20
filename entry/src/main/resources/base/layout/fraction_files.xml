@@ -23,12 +23,4 @@
         ohos:below="$id:text_helloworld"
         />
 
-    <TabList
-        ohos:id="$+id:bottom_nav"
-        ohos:height="match_content"
-        ohos:width="match_parent"
-        ohos:align_parent_bottom="true"
-        ohos:background_element="#19000000"
-        />
-
 </DependentLayout>

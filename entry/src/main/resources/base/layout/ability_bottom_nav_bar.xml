@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--The bottom navigation bar that can be reused in certain pages-->
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <TabList
+        ohos:id="$+id:bottom_nav_bar"
+        ohos:height="48vp"
+        ohos:width="match_parent"
+        ohos:align_parent_bottom="true"
+        ohos:background_element="#19000000"
+        ohos:orientation="horizontal"
+        />
+
+</DependentLayout>
