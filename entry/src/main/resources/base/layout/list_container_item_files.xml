@@ -14,7 +14,7 @@
         ohos:width="40vp"
         ohos:left_margin="20vp"
         ohos:scale_mode="zoom_center"
-        ohos:image_src="$media:folder"
+        ohos:image_src="$media:file"
         />
 
     <Text

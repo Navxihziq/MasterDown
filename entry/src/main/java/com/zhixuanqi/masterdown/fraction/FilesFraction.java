@@ -69,6 +69,7 @@ public class FilesFraction extends Fraction {
     }
 
     public void initUserFileProvider() throws IOException {
+        // todo: figure out a way to put different icons for folders and files
         // get the list container component from xml
         ListContainer listContainer = (ListContainer)getFractionAbility().findComponentById(ResourceTable.Id_file_list_container);
         // instantiate the user file list
