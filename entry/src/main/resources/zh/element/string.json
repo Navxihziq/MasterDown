@@ -23,6 +23,22 @@
     {
       "name": "mainability_SettingsTab",
       "value": "设置"
+    },
+    {
+      "name": "newfiledialog_title",
+      "value": "新建"
+    },
+    {
+      "name": "newfiledialog_filename",
+      "value": "请输入文件名"
+    },
+    {
+      "name": "newfiledialog_create_file",
+      "value": "新建文件"
+    },
+    {
+      "name": "newfiledialog_create_dir",
+      "value": "新建文件夹"
     }
   ]
 }

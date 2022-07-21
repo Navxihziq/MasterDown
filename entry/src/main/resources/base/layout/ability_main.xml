@@ -36,7 +36,9 @@
                 ohos:right_margin="10vp"
                 ohos:scale_mode="zoom_center"
                 ohos:vertical_center="true"
-                ohos:image_src="$media:new_file"/>
+                ohos:image_src="$media:new_file"
+                ohos:clickable="true"
+                />
 
         </DependentLayout>
 

@@ -23,6 +23,22 @@
     {
       "name": "mainability_SettingsTab",
       "value": "More"
+    },
+    {
+      "name": "newfiledialog_title",
+      "value": "New"
+    },
+    {
+      "name": "newfiledialog_filename",
+      "value": "Input the name"
+    },
+    {
+      "name": "newfiledialog_create_file",
+      "value": "Create File"
+    },
+    {
+      "name": "newfiledialog_create_dir",
+      "value": "Create Folder"
     }
   ]
 }

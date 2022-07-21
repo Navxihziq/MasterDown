@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="140vp"
+    ohos:width="300vp"
+    ohos:orientation="vertical"
+    ohos:alignment="center"
+    ohos:padding="20vp"
+    ohos:background_element="$graphic:common_dialog_new_file">
+
+    <TextField
+        ohos:id="$+id:filename_input"
+        ohos:height="30vp"
+        ohos:width="match_parent"
+        ohos:align_parent_top="true"
+        ohos:top_margin="10vp"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        ohos:text_size="18fp"
+        ohos:text_alignment="center"
+        ohos:background_element="$graphic:common_dialog_input"
+        ohos:hint="$string:newfiledialog_filename"
+        ohos:focus_border_enable="true"
+        />
+
+    <DependentLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:below="$id:filename_input"
+        ohos:orientation="horizontal"
+        ohos:alignment="horizontal_center"
+        ohos:top_margin="20vp"
+        >
+        <Button
+            ohos:id="$+id:create_file_button"
+            ohos:height="36vp"
+            ohos:width="100vp"
+            ohos:vertical_center="true"
+            ohos:align_parent_bottom="true"
+            ohos:right_margin="10vp"
+            ohos:background_element="$graphic:common_dialog_button"
+            ohos:text_size="15fp"
+            ohos:text_color="#FFFFFF"
+            ohos:text="$string:newfiledialog_create_file"
+            />
+
+        <Button
+            ohos:id="$+id:create_dir_button"
+            ohos:height="36vp"
+            ohos:width="100vp"
+            ohos:vertical_center="true"
+            ohos:align_parent_bottom="true"
+            ohos:left_margin="10vp"
+            ohos:right_of="$id:create_file_button"
+            ohos:background_element="$graphic:common_dialog_button"
+            ohos:text_size="15fp"
+            ohos:text_color="#FFFFFF"
+            ohos:text="$string:newfiledialog_create_dir"
+            />
+
+    </DependentLayout>
+
+</DependentLayout>

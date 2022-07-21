@@ -2,13 +2,11 @@ package com.zhixuanqi.masterdown.fraction;
 
 import com.zhixuanqi.masterdown.ResourceTable;
 import com.zhixuanqi.masterdown.UserFile;
+import com.zhixuanqi.masterdown.listener.NewFileButtonListener;
 import com.zhixuanqi.masterdown.provider.UserFileProvider;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.ListContainer;
+import ohos.agp.components.*;
 import ohos.app.Environment;
 
 import java.io.File;
@@ -28,26 +26,33 @@ public class FilesFraction extends Fraction {
 
         // initiate the user file data provider
         initUserFileProvider();
+
+        // bind click event listener to the new file image
+        Image newFileBtn = (Image) getFractionAbility().findComponentById(ResourceTable.Id_new_file_button);
+        newFileBtn.setClickedListener(new NewFileButtonListener());
     }
 
     private List<UserFile> getUserFileData(){
         List<UserFile> ls = new ArrayList<>();
         // generate mock data
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 5; i++){
             ls.add(new UserFile(true, "Test-File"+(i)+".md"));
         }
 
-        File pathToFiles = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "MasterDown");
+        File pathToDir = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "MasterDown");
 
         // make the directory for the app if not exists
-        if (!pathToFiles.exists()){
-            if (pathToFiles.mkdir()){
+        if (!pathToDir.exists()){
+            if (pathToDir.mkdir()){
                 System.out.println("Dir Created");
             }
         }
 
         // read file info
-
+        File[] files = pathToDir.listFiles();
+        for (File file : files){
+            ls.add(new UserFile(file.isFile(), file.getName()));
+        }
 
         return ls;
     }
