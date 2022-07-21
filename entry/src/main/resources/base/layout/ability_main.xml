@@ -62,7 +62,6 @@
         ohos:id="$+id:stack_layout"
         ohos:height="match_parent"
         ohos:width="match_parent"
-        ohos:background_element="#66000000"
         ohos:text_size="16fp"
         ohos:layout_alignment="center"
         ohos:text_alignment="center"

@@ -9,7 +9,9 @@ import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.LayoutScatter;
 import ohos.agp.components.ListContainer;
+import ohos.app.Environment;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,18 @@ public class FilesFraction extends Fraction {
         for(int i = 0; i < 10; i++){
             ls.add(new UserFile(true, "Test-File"+(i)+".md"));
         }
+
+        File pathToFiles = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "MasterDown");
+
+        // make the directory for the app if not exists
+        if (!pathToFiles.exists()){
+            if (pathToFiles.mkdir()){
+                System.out.println("Dir Created");
+            }
+        }
+
+        // read file info
+
 
         return ls;
     }

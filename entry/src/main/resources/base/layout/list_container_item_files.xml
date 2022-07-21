@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DirectionalLayout
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
-    ohos:height="48vp"
+    ohos:height="52vp"
     ohos:width="match_parent"
     ohos:orientation="horizontal"
-    ohos:bottom_margin="5vp"
-    ohos:background_element="#33000000"
+    ohos:bottom_margin="2vp"
+    ohos:background_element="#14000000"
     >
 
     <Image
         ohos:id="$+id:file_type_icon"
         ohos:height="match_parent"
         ohos:width="40vp"
-        ohos:margin="5vp"
+        ohos:left_margin="20vp"
         ohos:scale_mode="zoom_center"
         ohos:image_src="$media:folder"
-        ohos:background_element="#FF0FFF"
         />
 
     <Text
         ohos:id="$+id:file_name_text"
         ohos:height="match_parent"
         ohos:width="match_parent"
-        ohos:background_element="#FF0FFFFF"
-        ohos:text_alignment="center"
+        ohos:left_margin="20vp"
+        ohos:text_alignment="left"
+        ohos:layout_alignment="vertical_center"
         ohos:text_size="18fp"
         ohos:text="$string:mainability_HelloWorld"
         />
