@@ -58,7 +58,7 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     public void initUserFileProvider(){
-        // get the list container compnent from xml
+        // get the list container component from xml
         ListContainer listContainer = (ListContainer) findComponentById(ResourceTable.Id_file_list_container);
         // instantiate the user file list
         List<UserFile> ls = getUserFileData();
@@ -125,8 +125,8 @@ public class MainAbilitySlice extends AbilitySlice {
                         .replace(ResourceTable.Id_stack_layout, new FilesFraction())
                         .submit();
 
-                // todo: reload the files and dirs
-
+                // reload the files and dirs
+                initUserFileProvider();
                 break;
 
             case 1:
