@@ -9,9 +9,7 @@ import com.zhixuanqi.masterdown.provider.UserFileProvider;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.fraction.FractionAbility;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.ListContainer;
-import ohos.agp.components.TabList;
-import ohos.agp.components.Text;
+import ohos.agp.components.*;
 import ohos.global.resource.NotExistException;
 import ohos.global.resource.ResourceManager;
 import ohos.global.resource.WrongTypeException;
@@ -105,6 +103,9 @@ public class MainAbilitySlice extends AbilitySlice {
                         .replace(ResourceTable.Id_stack_layout, new FilesFraction())
                         .submit();
 
+                // add new file button to the button area in header
+                getAbility().findComponentById(ResourceTable.Id_new_file_button).setVisibility(Component.VISIBLE);
+
                 break;
 
             case 1:
@@ -113,6 +114,10 @@ public class MainAbilitySlice extends AbilitySlice {
                         .startFractionScheduler()
                         .replace(ResourceTable.Id_stack_layout, new TodosFraction())
                         .submit();
+
+                // remove the add file button
+                getAbility().findComponentById(ResourceTable.Id_new_file_button).setVisibility(Component.INVISIBLE);
+
                 break;
 
             case 2:
@@ -121,6 +126,9 @@ public class MainAbilitySlice extends AbilitySlice {
                         .startFractionScheduler()
                         .replace(ResourceTable.Id_stack_layout, new SettingsFraction())
                         .submit();
+
+                // remove the add file button
+                getAbility().findComponentById(ResourceTable.Id_new_file_button).setVisibility(Component.INVISIBLE);
                 break;
         }
     }

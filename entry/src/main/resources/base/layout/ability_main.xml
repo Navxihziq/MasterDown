@@ -19,17 +19,24 @@
             ohos:width="200vp"
             ohos:text_size="20fp"
             ohos:text_alignment="vertical_center"
-            ohos:margin="5vp"
-            ohos:text="Title"
-            ohos:background_element="#FAD815"/>
+            ohos:left_margin="20vp"
+            ohos:text="Title"/>
 
         <DependentLayout
             ohos:id="$+id:header_button_area"
             ohos:height="match_parent"
             ohos:width="match_parent"
             ohos:right_of="$id:header_title_text"
-            ohos:margin="5vp"
-            ohos:background_element="#AD1017">
+            ohos:orientation="horizontal">
+            <Image
+                ohos:id="$+id:new_file_button"
+                ohos:height="30vp"
+                ohos:width="30vp"
+                ohos:align_parent_end="true"
+                ohos:right_margin="10vp"
+                ohos:scale_mode="zoom_center"
+                ohos:vertical_center="true"
+                ohos:image_src="$media:new_file"/>
 
         </DependentLayout>
 
