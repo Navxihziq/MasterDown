@@ -11,6 +11,18 @@
     {
       "name": "mainability_HelloWorld",
       "value": "Hello World"
+    },
+    {
+      "name": "mainability_FileTab",
+      "value": "Files"
+    },
+    {
+      "name": "mainability_TodoTab",
+      "value": "Todos"
+    },
+    {
+      "name": "mainability_SettingsTab",
+      "value": "More"
     }
   ]
 }

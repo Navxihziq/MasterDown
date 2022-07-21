@@ -11,6 +11,7 @@ import ohos.aafwk.ability.fraction.FractionAbility;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.ListContainer;
 import ohos.agp.components.TabList;
+import ohos.agp.components.Text;
 import ohos.global.resource.NotExistException;
 import ohos.global.resource.ResourceManager;
 import ohos.global.resource.WrongTypeException;
@@ -117,6 +118,9 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     public void switchPage(int pageNum){
+        // change the title in the header to file
+        ((Text)findComponentById(ResourceTable.Id_header_title_text)).setText(menuItems[pageNum]);
+
         switch(pageNum){
             case 0:
                 // switch to the file panel
