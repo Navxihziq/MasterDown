@@ -3,15 +3,16 @@ package com.zhixuanqi.masterdown.provider;
 import com.zhixuanqi.masterdown.ResourceTable;
 import com.zhixuanqi.masterdown.UserFile;
 import ohos.aafwk.ability.AbilitySlice;
+import ohos.aafwk.ability.fraction.FractionAbility;
 import ohos.agp.components.*;
 
 import java.util.List;
 
 public class UserFileProvider extends BaseItemProvider {
-    private List<UserFile> userFileList;
-    private AbilitySlice slice;
+    private final List<UserFile> userFileList;
+    private final FractionAbility slice;
 
-    public UserFileProvider(List<UserFile> userFileList, AbilitySlice slice) {
+    public UserFileProvider(List<UserFile> userFileList, FractionAbility slice) {
         this.userFileList = userFileList;
         this.slice = slice;
     }

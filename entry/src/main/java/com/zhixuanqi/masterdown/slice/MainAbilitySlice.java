@@ -33,9 +33,6 @@ public class MainAbilitySlice extends AbilitySlice {
         } catch (NotExistException | WrongTypeException | IOException e) {
             e.printStackTrace();
         }
-
-        // initiate the user file data provider
-        initUserFileProvider();
     }
 
     @Override
@@ -46,27 +43,6 @@ public class MainAbilitySlice extends AbilitySlice {
     @Override
     public void onForeground(Intent intent) {
         super.onForeground(intent);
-    }
-
-    private List<UserFile> getUserFileData(){
-        List<UserFile> ls = new ArrayList<>();
-        // generate mock data
-        for(int i = 0; i < 10; i++){
-            ls.add(new UserFile(true, "Test-File"+(i)+".md"));
-        }
-
-        return ls;
-    }
-
-    public void initUserFileProvider(){
-        // get the list container component from xml
-        ListContainer listContainer = (ListContainer) findComponentById(ResourceTable.Id_file_list_container);
-        // instantiate the user file list
-        List<UserFile> ls = getUserFileData();
-        // instantiate the data provider
-        UserFileProvider provider = new UserFileProvider(ls, this);
-        // feed the data to the provider
-        listContainer.setItemProvider(provider);
     }
 
     public void initView() throws NotExistException, WrongTypeException, IOException {
@@ -129,8 +105,6 @@ public class MainAbilitySlice extends AbilitySlice {
                         .replace(ResourceTable.Id_stack_layout, new FilesFraction())
                         .submit();
 
-                // reload the files and dirs
-                initUserFileProvider();
                 break;
 
             case 1:

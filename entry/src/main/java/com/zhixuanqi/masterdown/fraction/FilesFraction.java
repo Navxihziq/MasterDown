@@ -1,11 +1,17 @@
 package com.zhixuanqi.masterdown.fraction;
 
 import com.zhixuanqi.masterdown.ResourceTable;
+import com.zhixuanqi.masterdown.UserFile;
+import com.zhixuanqi.masterdown.provider.UserFileProvider;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.LayoutScatter;
+import ohos.agp.components.ListContainer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class FilesFraction extends Fraction {
@@ -17,5 +23,30 @@ public class FilesFraction extends Fraction {
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
+
+        // initiate the user file data provider
+        initUserFileProvider();
     }
+
+    private List<UserFile> getUserFileData(){
+        List<UserFile> ls = new ArrayList<>();
+        // generate mock data
+        for(int i = 0; i < 10; i++){
+            ls.add(new UserFile(true, "Test-File"+(i)+".md"));
+        }
+
+        return ls;
+    }
+
+    public void initUserFileProvider(){
+        // get the list container component from xml
+        ListContainer listContainer = (ListContainer)getFractionAbility().findComponentById(ResourceTable.Id_file_list_container);
+        // instantiate the user file list
+        List<UserFile> ls = getUserFileData();
+        // instantiate the data provider
+        UserFileProvider provider = new UserFileProvider(ls, getFractionAbility());
+        // feed the data to the provider
+        listContainer.setItemProvider(provider);
+    }
+
 }
