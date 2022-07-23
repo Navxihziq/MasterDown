@@ -39,6 +39,18 @@
     {
       "name": "newfiledialog_create_dir",
       "value": "新建文件夹"
+    },
+    {
+      "name": "entry_EditorAbility",
+      "value": "entry_EditorAbility"
+    },
+    {
+      "name": "editorability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "editorability_HelloWorld",
+      "value": "你好，世界"
     }
   ]
 }

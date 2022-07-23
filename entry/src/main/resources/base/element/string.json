@@ -11,6 +11,18 @@
     {
       "name": "mainability_HelloWorld",
       "value": "Hello World"
+    },
+    {
+      "name": "editorability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "editorability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_EditorAbility",
+      "value": "entry_EditorAbility"
     }
   ]
 }

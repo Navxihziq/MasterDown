@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="top"
+    ohos:orientation="vertical">
+
+    <DependentLayout
+        ohos:id="$+id:editor_header"
+        ohos:height="50vp"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:align_parent_start="true">
+
+        <Text
+            ohos:id="$+id:editor_title_text"
+            ohos:height="match_parent"
+            ohos:width="200vp"
+            ohos:text_size="20fp"
+            ohos:align_parent_top="true"
+            ohos:text_alignment="vertical_center"
+            ohos:left_margin="20vp"
+            ohos:text="Title"/>
+
+    </DependentLayout>
+
+</DependentLayout>
