@@ -23,6 +23,32 @@
             ohos:left_margin="20vp"
             ohos:text="Title"/>
 
+        <DependentLayout
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:orientation="horizontal">
+
+        </DependentLayout>
+
     </DependentLayout>
+
+    <TextField
+        ohos:id="$+id:editor_textfield"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:below="$id:editor_header"
+        ohos:background_element="#FAAF00"
+        ohos:text_size="40fp"
+        ohos:text="你好个屁"/>
+
+    <ListContainer
+        ohos:id="$+id:editor_toolbar"
+        ohos:height="50vp"
+        ohos:width="match_parent"
+        ohos:align_parent_bottom="true"
+        ohos:orientation="horizontal"
+        ohos:background_element="#FAD815"/>
+
+
 
 </DependentLayout>
