@@ -8,6 +8,8 @@ import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
 import ohos.app.Environment;
+import ohos.data.DatabaseHelper;
+import ohos.data.preferences.Preferences;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +41,11 @@ public class FilesFraction extends Fraction {
 
     private List<UserFile> getUserFileData() throws IOException {
         List<UserFile> ls = new ArrayList<>();
-        File pathToDir = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "MasterDown");
+        // get current working directory
+        DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+        Preferences preferences = databaseHelper.getPreferences("preferences");
+        String cwd = preferences.getString("cwd", getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath());
+        File pathToDir = new File(cwd);
 
         // make the directory for the app if not exists
         if (!pathToDir.exists()){
@@ -69,7 +75,6 @@ public class FilesFraction extends Fraction {
     }
 
     public void initUserFileProvider() throws IOException {
-        // todo: figure out a way to put different icons for folders and files
         // get the list container component from xml
         ListContainer listContainer = (ListContainer)getFractionAbility().findComponentById(ResourceTable.Id_file_list_container);
         // instantiate the user file list

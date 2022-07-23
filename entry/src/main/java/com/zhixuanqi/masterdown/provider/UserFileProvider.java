@@ -5,7 +5,12 @@ import com.zhixuanqi.masterdown.UserFile;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.fraction.FractionAbility;
 import ohos.agp.components.*;
+import ohos.agp.components.element.Element;
+import ohos.global.resource.NotExistException;
+import ohos.global.resource.ResourceManager;
+import ohos.global.resource.WrongTypeException;
 
+import java.io.IOException;
 import java.util.List;
 
 public class UserFileProvider extends BaseItemProvider {
@@ -46,6 +51,10 @@ public class UserFileProvider extends BaseItemProvider {
             cpt = component;
         }
         UserFile file = userFileList.get(position);
+
+        //todo: set the icon based on the value of file.isFile()
+
+        // set the title of the file in the text section
         Text text = (Text) cpt.findComponentById(ResourceTable.Id_file_name_text);
         text.setText(file.getName());
 
