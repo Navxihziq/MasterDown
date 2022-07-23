@@ -28,6 +28,8 @@
             ohos:width="match_parent"
             ohos:orientation="horizontal">
 
+<!--            todo: add a save button here-->
+
         </DependentLayout>
 
     </DependentLayout>
@@ -38,8 +40,8 @@
         ohos:width="match_parent"
         ohos:below="$id:editor_header"
         ohos:background_element="#FAAF00"
-        ohos:text_size="40fp"
-        ohos:text="你好个屁"/>
+        ohos:text_size="20fp"
+        ohos:hint="Insert Text Here"/>
 
     <ListContainer
         ohos:id="$+id:editor_toolbar"
@@ -48,7 +50,6 @@
         ohos:align_parent_bottom="true"
         ohos:orientation="horizontal"
         ohos:background_element="#FAD815"/>
-
 
 
 </DependentLayout>
