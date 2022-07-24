@@ -1,6 +1,7 @@
 package com.zhixuanqi.masterdown.slice;
 
 import com.vladsch.flexmark.formatter.Formatter;
+import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.ast.Node;
 import com.zhixuanqi.masterdown.ResourceTable;
@@ -23,6 +24,8 @@ public class EditorAbilitySlice extends AbilitySlice {
 
         // set the title of the page by the name of the file
         ((Text) findComponentById(ResourceTable.Id_editor_title_text)).setText(filename);
+
+        // todo: bind the save button to save the editing file
 
         // todo: bind the cursor change listener
         // try to bind the functionality to the format button
@@ -49,7 +52,8 @@ public class EditorAbilitySlice extends AbilitySlice {
         Parser parser = Parser.builder().build();
         Node document = parser.parse(text);
         Formatter formatter = Formatter.builder().build();
+        HtmlRenderer renderer = HtmlRenderer.builder().build(); // todo: debugging session
 
-        return formatter.render(document);
+        return renderer.render(document);
     }
 }
