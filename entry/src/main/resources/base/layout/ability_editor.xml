@@ -26,9 +26,20 @@
         <DependentLayout
             ohos:height="match_parent"
             ohos:width="match_parent"
-            ohos:orientation="horizontal">
+            ohos:orientation="horizontal"
+            ohos:alignment="end"
+            ohos:right_of="$id:editor_title_text">
 
 <!--            todo: add a save button here-->
+            <Image
+                ohos:id="$+id:editor_save_button"
+                ohos:height="30vp"
+                ohos:width="30vp"
+                ohos:image_src="$media:save"
+                ohos:scale_mode="zoom_center"
+                ohos:vertical_center="true"
+                ohos:right_margin="10vp"
+                ohos:clickable="true"/>
 
         </DependentLayout>
 
