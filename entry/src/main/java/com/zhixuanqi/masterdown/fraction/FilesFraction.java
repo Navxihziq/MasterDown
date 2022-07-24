@@ -6,6 +6,7 @@ import com.zhixuanqi.masterdown.listener.NewFileButtonListener;
 import com.zhixuanqi.masterdown.provider.UserFileProvider;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
+import ohos.aafwk.content.Operation;
 import ohos.agp.components.*;
 import ohos.app.Environment;
 import ohos.data.DatabaseHelper;
@@ -37,6 +38,33 @@ public class FilesFraction extends Fraction {
         // bind click event listener to the new file image
         Image newFileBtn = (Image) getFractionAbility().findComponentById(ResourceTable.Id_new_file_button);
         newFileBtn.setClickedListener(new NewFileButtonListener());
+
+        ((ListContainer)getFractionAbility().findComponentById(ResourceTable.Id_file_list_container)).setItemClickedListener(new ListContainer.ItemClickedListener() {
+            @Override
+            public void onItemClicked(ListContainer listContainer, Component component, int i, long l) {
+                // jump to the editor page
+                Intent intent = new Intent();
+                Operation operation = new Intent.OperationBuilder()
+                        .withDeviceId("")
+                        .withBundleName("com.zhixuanqi.masterdown")
+                        .withAbilityName("EditorAbility")
+                        .build();
+                intent.setOperation(operation);
+                intent.setParam("filename", ((UserFile)(listContainer.getItemProvider().getItem(i))).getName());
+                getFractionAbility().startAbility(intent);   // start the ability
+            }
+        });
+    }
+
+    @Override
+    protected void onInactive() {
+        super.onInactive();
+        // initiate the user file data provider
+        try {
+            initUserFileProvider();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private List<UserFile> getUserFileData() throws IOException {
@@ -54,8 +82,8 @@ public class FilesFraction extends Fraction {
             }
         }
 
-        // generate mock data
-        for(int i = 0; i < 10; i++){
+        // todo: remove in release: generate mock data
+        for(int i = 0; i < 5; i++){
             // ls.add(new UserFile(true, "Test-File"+(i)+".md"));
 
             // create actual file as mocking data
