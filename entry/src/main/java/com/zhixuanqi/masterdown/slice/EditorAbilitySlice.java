@@ -6,9 +6,11 @@ import com.vladsch.flexmark.util.ast.Node;
 import com.zhixuanqi.masterdown.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
+import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.Text;
 import ohos.agp.components.TextField;
+import ohos.global.resource.Resource;
 import ohos.multimodalinput.event.KeyEvent;
 
 public class EditorAbilitySlice extends AbilitySlice {
@@ -23,7 +25,13 @@ public class EditorAbilitySlice extends AbilitySlice {
         ((Text) findComponentById(ResourceTable.Id_editor_title_text)).setText(filename);
 
         // todo: bind the cursor change listener
-        //
+        // try to bind the functionality to the format button
+        findComponentById(ResourceTable.Id_editor_reformat_button).setClickedListener(component -> {
+            TextField textField = (TextField) findComponentById(ResourceTable.Id_editor_textfield);
+            String input = textField.getText();
+            System.out.println(reformatText(input));    // todo: debugging session
+            textField.setText(reformatText(input));
+        });
     }
 
     @Override

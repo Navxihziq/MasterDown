@@ -30,15 +30,26 @@
             ohos:alignment="end"
             ohos:right_of="$id:editor_title_text">
 
-<!--            todo: add a save button here-->
+            <Image
+                ohos:id="$+id:editor_reformat_button"
+                ohos:height="30vp"
+                ohos:width="30vp"
+                ohos:vertical_center="true"
+                ohos:left_of="$id:editor_save_button"
+                ohos:right_margin="30vp"
+                ohos:scale_mode="zoom_center"
+                ohos:image_src="$media:reformat"
+                ohos:clickable="true"/>
+
             <Image
                 ohos:id="$+id:editor_save_button"
                 ohos:height="30vp"
                 ohos:width="30vp"
                 ohos:image_src="$media:save"
                 ohos:scale_mode="zoom_center"
-                ohos:vertical_center="true"
+                ohos:align_parent_end="true"
                 ohos:right_margin="10vp"
+                ohos:vertical_center="true"
                 ohos:clickable="true"/>
 
         </DependentLayout>
