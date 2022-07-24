@@ -60,4 +60,9 @@ public class UserFileProvider extends BaseItemProvider {
 
         return cpt;
     }
+
+    @Override
+    public void notifyDataChanged() {
+        super.notifyDataChanged();
+    }
 }

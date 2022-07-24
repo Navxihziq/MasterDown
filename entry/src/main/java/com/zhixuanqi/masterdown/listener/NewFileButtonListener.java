@@ -1,11 +1,6 @@
 package com.zhixuanqi.masterdown.listener;
 
-import com.zhixuanqi.masterdown.EditorAbility;
 import com.zhixuanqi.masterdown.ResourceTable;
-import com.zhixuanqi.masterdown.fraction.FilesFraction;
-import ohos.aafwk.ability.Ability;
-import ohos.aafwk.content.Intent;
-import ohos.aafwk.content.Operation;
 import ohos.agp.components.*;
 import ohos.agp.window.dialog.CommonDialog;
 import ohos.app.Environment;
@@ -17,7 +12,6 @@ import ohos.global.resource.WrongTypeException;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Parameter;
 
 public class NewFileButtonListener implements Component.ClickedListener {
     @Override

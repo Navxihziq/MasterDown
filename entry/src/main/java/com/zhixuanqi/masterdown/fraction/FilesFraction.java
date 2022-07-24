@@ -56,17 +56,6 @@ public class FilesFraction extends Fraction {
         });
     }
 
-    @Override
-    protected void onInactive() {
-        super.onInactive();
-        // initiate the user file data provider
-        try {
-            initUserFileProvider();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     private List<UserFile> getUserFileData() throws IOException {
         List<UserFile> ls = new ArrayList<>();
         // get current working directory
