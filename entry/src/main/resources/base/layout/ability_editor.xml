@@ -61,9 +61,10 @@
         ohos:height="match_parent"
         ohos:width="match_parent"
         ohos:below="$id:editor_header"
-        ohos:background_element="#FAAF00"
-        ohos:text_size="20fp"
-        ohos:hint="Insert Text Here"/>
+        ohos:padding="10vp"
+        ohos:background_element="#FFF1F1F1"
+        ohos:text_size="16fp"
+            ohos:hint="$string:editor_insert_text"/>
 
     <ListContainer
         ohos:id="$+id:editor_toolbar"

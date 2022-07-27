@@ -71,6 +71,10 @@
     {
       "name": "moreability_sourceCode",
       "value": "Source Code"
+    },
+    {
+      "name": "editor_insert_text",
+      "value": "Insert text here"
     }
   ]
 }

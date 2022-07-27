@@ -22,7 +22,7 @@
     },
     {
       "name": "mainability_SettingsTab",
-      "value": "设置"
+      "value": "更多"
     },
     {
       "name": "newfiledialog_title",
@@ -71,6 +71,10 @@
     {
       "name": "moreability_sourceCode",
       "value": "源代码"
+    },
+    {
+      "name": "editor_insert_text",
+      "value": "请在此输入"
     }
   ]
 }
