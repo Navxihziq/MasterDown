@@ -46,13 +46,13 @@ public class EditorAbilitySlice extends AbilitySlice {
         
         // write the content of the file to the text field
         try (BufferedReader bufferedReader = Files.newBufferedReader(Paths.get(cwd+"/"+filename), StandardCharsets.UTF_8)){
-            StringBuilder text = null;
+            String text = "";
             String str = null;
             while((str=bufferedReader.readLine())!=null){
                 System.out.println(str);
-                text.append(str).append("\n");
+                text += (str+"\n");
             }
-            ((TextField) findComponentById(ResourceTable.Id_editor_textfield)).setText(text.toString());
+            ((TextField) findComponentById(ResourceTable.Id_editor_textfield)).setText(text);
         } catch (IOException e) {
             e.printStackTrace();
         }
