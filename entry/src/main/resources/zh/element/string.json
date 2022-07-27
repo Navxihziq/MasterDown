@@ -51,6 +51,26 @@
     {
       "name": "editorability_HelloWorld",
       "value": "你好，世界"
+    },
+    {
+      "name": "moreability_projectTeam",
+      "value": "项目团队"
+    },
+    {
+      "name": "moreability_teamName",
+      "value": "Navxihziq"
+    },
+    {
+      "name": "moreability_teamDescription",
+      "value": "毫无码力的软件工程三年级学生。"
+    },
+    {
+      "name": "moreability_licenceTitle",
+      "value": "软件许可"
+    },
+    {
+      "name": "moreability_sourceCode",
+      "value": "源代码"
     }
   ]
 }

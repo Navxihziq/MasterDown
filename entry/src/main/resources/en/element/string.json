@@ -51,6 +51,26 @@
     {
       "name": "editorability_HelloWorld",
       "value": "Hello World"
+    },
+    {
+      "name": "moreability_projectTeam",
+      "value": "Development Team"
+    },
+    {
+      "name": "moreability_teamName",
+      "value": "Navxihziq"
+    },
+    {
+      "name": "moreability_teamDescription",
+      "value": "Novice programmer"
+    },
+    {
+      "name": "moreability_licenceTitle",
+      "value": "Licence"
+    },
+    {
+      "name": "moreability_sourceCode",
+      "value": "Source Code"
     }
   ]
 }

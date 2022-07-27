@@ -3,13 +3,178 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
-    ohos:orientation="vertical">
+    ohos:alignment="start"
+    ohos:orientation="vertical"
+    ohos:background_element="#FFF5A19">
 
-    <Text
-        ohos:height="match_parent"
+    <DependentLayout
+        ohos:id="$+id:more_team_section"
+        ohos:height="120vp"
         ohos:width="match_parent"
-        ohos:text="Settings Sessions"
-        ohos:text_alignment="center"
-        ohos:text_size="24fp"
-        ohos:background_element="#FAD815"/>
+        ohos:orientation="vertical"
+        ohos:align_parent_start="true"
+        ohos:padding="10vp"
+        ohos:background_element="$graphic:background_more_items">
+        
+        <Text
+            ohos:id="$+id:more_team_title"
+            ohos:height="30vp"
+            ohos:width="match_parent"
+            ohos:text_size="20fp"
+            ohos:text_alignment="left"
+            ohos:text="$string:moreability_projectTeam"
+            ohos:text_color="#FFFF5A19"
+            />
+
+        <DependentLayout
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:orientation="horizontal"
+            ohos:below="$id:more_team_title"
+            ohos:alignment="start">
+            
+            <Image
+                ohos:id="$+id:more_team_img"
+                ohos:height="55vp"
+                ohos:width="55vp"
+                ohos:image_src="$media:team"
+                ohos:scale_mode="zoom_center"
+                ohos:align_parent_start="true"
+                ohos:vertical_center="true"/>
+
+            <DirectionalLayout
+                ohos:height="match_parent"
+                ohos:width="match_content"
+                ohos:right_of="$id:more_team_img"
+                ohos:left_margin="10vp"
+                ohos:top_margin="5vp"
+                ohos:vertical_center="true"
+                ohos:orientation="vertical">
+
+                <Text
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:text_size="20fp"
+                    ohos:text="$string:moreability_teamName"
+                    ohos:text_color="#FFD6D6D6"/>
+
+                <Text
+                    ohos:height="match_parent"
+                    ohos:width="match_parent"
+                    ohos:text_size="16fp"
+                    ohos:text="$string:moreability_teamDescription"
+                    ohos:text_color="#FFB0B0B0"/>
+
+            </DirectionalLayout>
+
+        </DependentLayout>
+
+    </DependentLayout>
+    
+    <DependentLayout
+        ohos:height="190vp"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:top_margin="1vp"
+        ohos:below="$id:more_team_section"
+        ohos:padding="10vp"
+        ohos:background_element="$graphic:background_more_items">
+
+        <Text
+            ohos:id="$+id:more_licence_title"
+            ohos:height="30vp"
+            ohos:width="match_parent"
+            ohos:text_size="20fp"
+            ohos:text_alignment="left"
+            ohos:text="$string:moreability_licenceTitle"
+            ohos:text_color="#FFFF5A19"
+            />
+
+        <DependentLayout
+            ohos:id="$+id:more_licence_section"
+            ohos:height="60vp"
+            ohos:width="match_parent"
+            ohos:orientation="horizontal"
+            ohos:below="$id:more_licence_title"
+            ohos:alignment="start">
+
+            <Image
+                ohos:id="$+id:more_copyright_icon"
+                ohos:height="40vp"
+                ohos:width="40vp"
+                ohos:image_src="$media:copyright"
+                ohos:scale_mode="zoom_center"
+                ohos:align_parent_start="true"
+                ohos:vertical_center="true"/>
+
+            <DirectionalLayout
+                ohos:height="match_parent"
+                ohos:width="match_content"
+                ohos:right_of="$id:more_copyright_icon"
+                ohos:left_margin="10vp"
+                ohos:top_margin="5vp"
+                ohos:vertical_center="true"
+                ohos:orientation="vertical">
+
+                <Text
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:text_size="20fp"
+                    ohos:text="项目许可协议"
+                    ohos:text_color="#FFD6D6D6"/>
+
+                <Text
+                    ohos:height="match_parent"
+                    ohos:width="match_parent"
+                    ohos:text_size="16fp"
+                    ohos:text="MIT Licence"
+                    ohos:text_color="#FFB0B0B0"/>
+
+            </DirectionalLayout>
+
+        </DependentLayout>
+
+        <DirectionalLayout
+            ohos:height="120vp"
+            ohos:width="match_content"
+            ohos:left_margin="0vp"
+            ohos:top_margin="20vp"
+            ohos:below="$id:more_licence_section"
+            ohos:alignment="start"
+            ohos:orientation="horizontal">
+
+            <Image
+                ohos:height="40vp"
+                ohos:width="40vp"
+                ohos:image_src="$media:code"
+                ohos:scale_mode="zoom_center"
+                ohos:vertical_center="true"
+                ohos:align_parent_start="true"
+                />
+
+            <DirectionalLayout
+                ohos:height="match_parent"
+                ohos:width="match_content"
+                ohos:orientation="vertical"
+                ohos:left_margin="10vp">
+
+                <Text
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:text_size="20fp"
+                    ohos:text="$string:moreability_sourceCode"
+                    ohos:text_color="#FFD6D6D6"/>
+
+                <Text
+                    ohos:height="match_parent"
+                    ohos:width="match_parent"
+                    ohos:text_size="16fp"
+                    ohos:text="github.com/Navxihziq/MasterDown"
+                    ohos:text_color="#FFB0B0B0"/>
+            </DirectionalLayout>
+
+        </DirectionalLayout>
+
+    </DependentLayout>
+
 </DependentLayout>
