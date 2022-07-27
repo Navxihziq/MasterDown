@@ -37,8 +37,8 @@
       "value": "Create File"
     },
     {
-      "name": "newfiledialog_create_dir",
-      "value": "Create Folder"
+      "name": "newfiledialog_cancel",
+      "value": "Cancel"
     },
     {
       "name": "entry_EditorAbility",

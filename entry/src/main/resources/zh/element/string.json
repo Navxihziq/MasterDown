@@ -37,8 +37,8 @@
       "value": "新建文件"
     },
     {
-      "name": "newfiledialog_create_dir",
-      "value": "新建文件夹"
+      "name": "newfiledialog_cancel",
+      "value": "取消"
     },
     {
       "name": "entry_EditorAbility",

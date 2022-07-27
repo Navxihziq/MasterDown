@@ -45,7 +45,7 @@
             />
 
         <Button
-            ohos:id="$+id:create_dir_button"
+            ohos:id="$+id:dialog_cancel_button"
             ohos:height="36vp"
             ohos:width="100vp"
             ohos:vertical_center="true"
@@ -55,7 +55,7 @@
             ohos:background_element="$graphic:common_dialog_button"
             ohos:text_size="15fp"
             ohos:text_color="#FFFFFF"
-            ohos:text="$string:newfiledialog_create_dir"
+            ohos:text="$string:newfiledialog_cancel"
             />
 
     </DependentLayout>

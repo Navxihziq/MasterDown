@@ -35,28 +35,33 @@ public class NewFileButtonListener implements Component.ClickedListener {
 
         // todo: add listeners to both buttons
         Button newFileBtn = (Button) ctn_body.findComponentById(ResourceTable.Id_create_file_button);
-        Button newDirBtn = (Button) ctn_body.findComponentById(ResourceTable.Id_create_dir_button);
-        newFileBtn.setClickedListener(new Component.ClickedListener() {
-            @Override
-            public void onClick(Component component) {
-                // get the name for the new file
-                String newFilename = ((TextField)ctn_body.findComponentById(ResourceTable.Id_filename_input)).getText();
-                // create file
-                DatabaseHelper databaseHelper = new DatabaseHelper(ctn_body.getContext());
-                Preferences preferences = databaseHelper.getPreferences("preferences");
-                String cwd = preferences.getString("cwd", ctn_body.getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath());
-                File newFile = new File(cwd, newFilename);
-                try {
-                    if (!newFile.createNewFile()){
-                        return;
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
+        Button cancel = (Button) ctn_body.findComponentById(ResourceTable.Id_dialog_cancel_button);
+
+        // create new file on click
+        newFileBtn.setClickedListener(component1 -> {
+            // get the name for the new file
+            String newFilename = ((TextField)ctn_body.findComponentById(ResourceTable.Id_filename_input)).getText();
+            // create file
+            DatabaseHelper databaseHelper = new DatabaseHelper(ctn_body.getContext());
+            Preferences preferences = databaseHelper.getPreferences("preferences");
+            String cwd = preferences.getString("cwd", ctn_body.getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath());
+            File newFile = new File(cwd, newFilename);
+            try {
+                if (!newFile.createNewFile()){
+                    return;
                 }
-                // destroy the dialog
-                newFileDlg.destroy();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+            // destroy the dialog
+            newFileDlg.destroy();
         });
+
+        // close dialog on cancel click
+        cancel.setClickedListener(component2->{
+            newFileDlg.destroy();
+        });
+
         newFileDlg.show();
     }
 }
