@@ -57,6 +57,11 @@
           "name": "hwc-theme",
           "value": "androidhwext:style/Theme.Emui.NoTitleBar",
           "extra": ""
+        },
+        {
+          "name": "hwc-theme",
+          "value": "androidhwext:style/Theme.Emui.NoActionBar",
+          "extra": ""
         }
       ]
     },

@@ -6,6 +6,11 @@ import ohos.aafwk.content.Intent;
 import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.LayoutScatter;
+import ohos.data.DatabaseHelper;
+import ohos.data.rdb.RdbOpenCallback;
+import ohos.data.rdb.RdbStore;
+import ohos.data.rdb.StoreConfig;
+import ohos.data.rdb.ValuesBucket;
 
 public class TodosFraction extends Fraction {
     @Override
