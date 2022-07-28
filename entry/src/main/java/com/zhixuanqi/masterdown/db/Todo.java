@@ -6,6 +6,7 @@ import ohos.data.orm.annotation.Entity;
 import ohos.data.orm.annotation.PrimaryKey;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity(tableName = "todo")
@@ -13,7 +14,7 @@ public class Todo extends OrmObject implements Serializable {
     @PrimaryKey(autoGenerate = true)
     @Column(name="id")
     private Integer id;
-    @Column(name = "title")
+    @Column(name = "title", unique = true)
     private String title;
     @Column(name = "checked")
     private Boolean checked;
@@ -33,6 +34,8 @@ public class Todo extends OrmObject implements Serializable {
 
     public Todo(String title) {
         this.title = title;
+        this.checked=false;
+        this.created_time = new Date();
     }
 
     public Integer getId() {

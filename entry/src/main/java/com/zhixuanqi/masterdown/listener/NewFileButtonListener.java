@@ -33,7 +33,7 @@ public class NewFileButtonListener implements Component.ClickedListener {
         newFileDlg.setContentCustomComponent(ctn_body);
         newFileDlg.setSize(ComponentContainer.LayoutConfig.MATCH_CONTENT, ComponentContainer.LayoutConfig.MATCH_CONTENT);
 
-        // todo: add listeners to both buttons
+        // add listeners to both buttons
         Button newFileBtn = (Button) ctn_body.findComponentById(ResourceTable.Id_create_file_button);
         Button cancel = (Button) ctn_body.findComponentById(ResourceTable.Id_dialog_cancel_button);
 

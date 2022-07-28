@@ -116,8 +116,8 @@ public class MainAbilitySlice extends AbilitySlice {
                         .replace(ResourceTable.Id_stack_layout, new TodosFraction())
                         .submit();
 
-                // remove the add file button
-                getAbility().findComponentById(ResourceTable.Id_new_file_button).setVisibility(Component.INVISIBLE);
+                // make the add to-do entry (file) button
+                getAbility().findComponentById(ResourceTable.Id_new_file_button).setVisibility(Component.VISIBLE);
 
                 break;
 

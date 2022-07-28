@@ -5,11 +5,9 @@
     ohos:width="match_parent"
     ohos:orientation="vertical">
 
-    <Text
+    <ListContainer
+        ohos:id="$+id:todo_list_container"
         ohos:height="match_parent"
-        ohos:width="match_parent"
-        ohos:text="Todo Sessions"
-        ohos:text_alignment="center"
-        ohos:text_size="24fp"
-        ohos:background_element="#FAD815"/>
+        ohos:width="match_parent"/>
+
 </DependentLayout>
