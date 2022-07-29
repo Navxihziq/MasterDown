@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="40vp"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="start">
+
+    <Checkbox
+        ohos:id="$+id:todo_checkbox"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:text="$string:editor_insert_text"
+        ohos:text_size="20fp"
+        ohos:horizontal_center="true"
+        ohos:vertical_center="true"
+        ohos:padding="5vp"
+        ohos:background_element="#14000000"/>
+
+</DependentLayout>

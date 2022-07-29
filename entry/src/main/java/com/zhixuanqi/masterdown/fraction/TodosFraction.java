@@ -2,6 +2,7 @@ package com.zhixuanqi.masterdown.fraction;
 
 import com.zhixuanqi.masterdown.ResourceTable;
 import com.zhixuanqi.masterdown.db.Todo;
+import com.zhixuanqi.masterdown.provider.TodoProvider;
 import com.zhixuanqi.masterdown.util.DatabaseUtil;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
@@ -10,8 +11,10 @@ import ohos.agp.window.dialog.CommonDialog;
 import ohos.global.resource.NotExistException;
 import ohos.global.resource.ResourceManager;
 import ohos.global.resource.WrongTypeException;
+import org.jsoup.helper.DataUtil;
 
 import java.io.IOException;
+import java.util.List;
 
 public class TodosFraction extends Fraction {
     @Override
@@ -22,9 +25,6 @@ public class TodosFraction extends Fraction {
     @Override
     protected void onStart(Intent intent) {
         super.onStart(intent);
-        // try to create a mocking entry at beginning
-        Todo todo = new Todo("Add a new todo");
-        DatabaseUtil.addTodo(todo);
 
         // bind the new file button to add new to-do entry
         getFractionAbility().findComponentById(ResourceTable.Id_new_file_button).setClickedListener(new Component.ClickedListener() {
@@ -71,5 +71,28 @@ public class TodosFraction extends Fraction {
                 newTodoDlg.show();
             }
         });
+
+        initTodoProvider();
+
+        ((ListContainer)getFractionAbility().findComponentById(ResourceTable.Id_todo_list_container)).setItemClickedListener(new ListContainer.ItemClickedListener() {
+            @Override
+            public void onItemClicked(ListContainer listContainer, Component component, int i, long l) {
+                Todo todo = DatabaseUtil.queryTitle(component.getName());
+                if (todo != null){
+                    DatabaseUtil.checkTodo(todo);
+                }
+            }
+        });
+    }
+
+    public void initTodoProvider(){
+        // get the list container component from xml
+        ListContainer listContainer = (ListContainer)getFractionAbility().findComponentById(ResourceTable.Id_todo_list_container);
+        // instantiate the user file list
+        List<Todo> ls = DatabaseUtil.getNotChecked();
+        // instantiate the data provider
+        TodoProvider provider = new TodoProvider(ls, getFractionAbility());
+        // feed the data to the provider
+        listContainer.setItemProvider(provider);
     }
 }

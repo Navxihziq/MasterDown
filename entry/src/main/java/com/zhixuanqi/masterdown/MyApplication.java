@@ -1,5 +1,6 @@
 package com.zhixuanqi.masterdown;
 
+import com.zhixuanqi.masterdown.db.Todo;
 import com.zhixuanqi.masterdown.util.DatabaseUtil;
 import ohos.aafwk.ability.AbilityPackage;
 import ohos.app.Environment;
@@ -17,5 +18,9 @@ public class MyApplication extends AbilityPackage {
         preferences.putString("cwd", getContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath()+"/MasterDown");
         // initialize the database
         DatabaseUtil.onInitialize(this);
+
+        // try to create a mocking entry at beginning
+        Todo todo = new Todo("Add a new todo");
+        DatabaseUtil.addTodo(todo);
     }
 }
