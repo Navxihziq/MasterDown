@@ -40,6 +40,60 @@ git clone https://github.com/your-username/note-taking-app.git
 3. Build the app by clicking the "Build" button in the DevEco Studio toolbar or by selecting "Build" > "Build App(s)".
 4. If the build is successful, you can run the app on your connected device or emulator by clicking the "Run" button in the DevEco Studio toolbar or by selecting "Run" > "Run App".
 
+### Code Structure
+```bash
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/noteapp/
+│   │       ├── abilities/
+│   │       │   ├── MainActivity.java
+│   │       │   └── NoteDetailAbility.java
+│   │       ├── beans/
+│   │       │   └── Note.java
+│   │       ├── databaseutils/
+│   │       │   └── DatabaseHelper.java
+│   │       ├── listeners/
+│   │       │   └── NoteItemClickListener.java
+│   │       ├── providers/
+│   │       │   └── NoteItemProvider.java
+│   │       ├── slices/
+│   │       │   └── NoteItemSlice.java
+│   │       └── utils/
+│   │           └── NoteUtils.java
+│   └── resources/
+│       ├── base/
+│       │   ├── layout/
+│       │   │   ├── activity_main.xml
+│       │   │   ├── activity_note_detail.xml
+│       │   │   └── slice_note_item.xml
+│       │   ├── strings.json
+│       │   └── ...
+│       └── ...
+├── ...
+└── ...
+```
+- abilities:
+`MainActivity.java`: The main Ability responsible for displaying the list of notes and handling user interactions.
+`NoteDetailAbility.java`: The Ability for creating, editing, and viewing note details.
+- beans:
+`Note.java`: The data model class representing a single note.
+- databaseutils:
+`DatabaseHelper.java`: A utility class for managing the SQLite database operations (create, read, update, delete).
+- listeners:
+`NoteItemClickListener.java`: A listener class for handling note item clicks in the list.
+- providers:
+`NoteItemProvider.java`: A class that implements BaseItemProvider to provide data to the ListContainer for displaying note items.
+- slices:
+`NoteItemSlice.java`: A Slice class representing the layout and behavior of a single note item in the list.
+- utils:
+`NoteUtils.java`: A utility class containing helper methods for various operations (e.g., date formatting, string manipulation).
+- resources/base/layout:
+`activity_main.xml`: The layout file for the main activity.
+`activity_note_detail.xml`: The layout file for the note detail activity.
+`slice_note_item.xml`: The layout file for a single note item in the list.
+- resources/base/strings.json: This file contains the string resources used in the app.
+
 ## Contributing
 
 If you would like to contribute to this project, please follow these steps:
